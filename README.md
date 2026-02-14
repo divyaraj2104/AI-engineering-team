@@ -1,54 +1,96 @@
-# MyWebsiteBuilder Crew
+<h1 align="center">🚀 MyWebsiteBuilder</h1>
 
-Welcome to the MyWebsiteBuilder Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+<p align="center">
+  Dynamic Multi-Agent Website Generator built with CrewAI
+</p>
 
-## Installation
+<p align="center">
+  <b>Orchestrator → Worker Architecture</b> • Shared Memory • Structured Outputs • Sequential Page Generation
+</p>
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+<hr>
 
-First, if you haven't already, install uv:
+<h2>🧠 Overview</h2>
 
-```bash
+<p>
+MyWebsiteBuilder is an AI-powered multi-agent system that autonomously designs and generates 
+multi-page websites from a single high-level requirement.
+</p>
+
+<p>
+It dynamically creates agents and tasks, leverages structured outputs (Pydantic), 
+and maintains shared crew memory to ensure cross-page consistency.
+</p>
+
+<hr>
+
+<h2>⚙️ Architecture</h2>
+
+<ul>
+  <li><b>Engineering Manager Agent</b>
+    <ul>
+      <li>Breaks requirements into structured modules</li>
+      <li>Defines page components and instructions</li>
+      <li>Returns structured Pydantic outputs</li>
+    </ul>
+  </li>
+  <li><b>Web Developer Agent</b>
+    <ul>
+      <li>Generates HTML for each module</li>
+      <li>Maintains shared memory across pages</li>
+      <li>Ensures theme and navigation consistency</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h2>✨ Key Features</h2>
+
+<ul>
+  <li>Dynamic Agent & Task Creation</li>
+  <li>Shared Crew Memory (<code>memory=True</code>)</li>
+  <li>Sequential Execution Flow</li>
+  <li>Pydantic Structured Outputs</li>
+  <li>Config-Driven YAML Architecture</li>
+</ul>
+
+<hr>
+
+<h2>🛠 Tech Stack</h2>
+
+<ul>
+  <li>Python 3.10+</li>
+  <li>CrewAI</li>
+  <li>Pydantic</li>
+  <li>YAML Configurations</li>
+  <li>UV Dependency Management</li>
+</ul>
+
+<hr>
+
+<h2>▶️ Running the Project</h2>
+
+<pre>
 pip install uv
-```
-
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
 crewai install
-```
-### Customizing
+crewai run
+</pre>
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+<p>
+Make sure to add your <code>OPENAI_API_KEY</code> inside a <code>.env</code> file.
+</p>
 
-- Modify `src/my_website_builder/config/agents.yaml` to define your agents
-- Modify `src/my_website_builder/config/tasks.yaml` to define your tasks
-- Modify `src/my_website_builder/crew.py` to add your own logic, tools and specific args
-- Modify `src/my_website_builder/main.py` to add custom inputs for your agents and tasks
+<hr>
 
-## Running the Project
+<h2>📌 What This Project Demonstrates</h2>
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+<ul>
+  <li>Multi-Agent Orchestration</li>
+  <li>Stateful AI Systems</li>
+  <li>Orchestrator-Worker Pattern</li>
+  <li>AI Memory Management</li>
+  <li>Production-Style Agent Architecture</li>
+</ul>
 
-```bash
-$ crewai run
-```
-
-This command initializes the my_website_builder Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The my_website_builder Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the MyWebsiteBuilder Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+<hr>
