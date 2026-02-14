@@ -1,0 +1,18 @@
+design_app:
+  description: >
+    Given user requirements, design a workflow of website having multiple web pages.
+    List down all the modules and it's components and it's requirement in detailed.
+    The user requirements given : {requirements}
+    
+    IMPORTANT: You must output valid JSON format. The instructions array must be a single continuous array
+    with no blank lines between items. Each instruction should be a separate string element in the array.
+    Do not include blank lines or extra whitespace within the JSON structure.
+  expected_output: >
+    Return a valid JSON object with three fields:
+    1. module_names: A list of strings containing the names of all modules/pages
+    2. components: A list of lists, where each inner list contains component names for that module
+    3. instructions: A single continuous list of strings with detailed instructions for each component.
+       Each instruction should be a separate string element with no blank lines between them.
+    The JSON must be valid and parseable without any formatting errors.
+  agent: engineering_manager
+  output_file: output/design_plan.md

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .section-heading {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+        .feature-item {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            transition: transform 0.3s;
+        }
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Component -->
+    <header class="bg-dark text-white p-4 d-flex justify-content-between align-items-center">
+        <div class="text-xl fw-bold">AI Document Intelligence</div>
+        <nav>
+            <a href="index.html" class="mx-2 text-white">Home</a>
+            <a href="features.html" class="mx-2 text-white">Features</a>
+            <a href="about.html" class="mx-2 text-white">About</a>
+        </nav>
+    </header>
+
+    <!-- Company Description Component -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center">About Our Company</h2>
+            <p class="text-center">
+                We are pioneers in crafting innovative AI-powered document intelligence tools. Our solutions are designed to enhance efficiency, reduce costs, and streamline operations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Statement Component -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="section-heading text-center">Our Mission</h2>
+            <p class="text-center">
+                Our mission is to empower businesses with intelligent technology that revolutionizes document processing and data analysis, making them faster, smarter, and more effective.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center">Key Features of Our AI-Powered Document Intelligence</h2>
+            <div class="row">
+                <div class="col-md-4 feature-item text-center">
+                    <h4 class="fw-bold">Real-Time Analysis</h4>
+                    <p>Get insights from your documents instantly with cutting-edge AI analysis.</p>
+                </div>
+                <div class="col-md-4 feature-item text-center">
+                    <h4 class="fw-bold">Automated Data Extraction</h4>
+                    <p>Eliminate manual data entry with our precise and efficient AI tools.</p>
+                </div>
+                <div class="col-md-4 feature-item text-center">
+                    <h4 class="fw-bold">Customizable Solutions</h4>
+                    <p>Tailor our AI solutions to fit your specific business needs and processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2023 AI Document Intelligence. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Application State
+        const state = {
+            features: [
+                { title: "Real-Time Analysis", description: "Get insights from your documents instantly with cutting-edge AI analysis." },
+                { title: "Automated Data Extraction", description: "Eliminate manual data entry with our precise and efficient AI tools." },
+                { title: "Customizable Solutions", description: "Tailor our AI solutions to fit your specific business needs and processes." }
+            ]
+        };
+
+        // UI Rendering Functions
+        function renderFeatures() {
+            const featureContainer = document.querySelector('.row');
+            featureContainer.innerHTML = '';
+            state.features.forEach(item => {
+                const featureDiv = document.createElement('div');
+                featureDiv.className = 'col-md-4 feature-item text-center';
+                featureDiv.innerHTML = `
+                    <h4 class="fw-bold">${item.title}</h4>
+                    <p>${item.description}</p>
+                `;
+                featureContainer.appendChild(featureDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderFeatures();
+        });
+    </script>
+
+</body>
+</html>

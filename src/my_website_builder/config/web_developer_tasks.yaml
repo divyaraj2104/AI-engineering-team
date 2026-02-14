@@ -1,0 +1,73 @@
+
+
+create_webpage:
+  description: >
+    Create a complete, production-ready single-file webpage for the given module.
+
+    Inputs provided to you:
+    - module_name: the name of the file to generate.
+    - components: a structured list of UI components that must be implemented.
+    - instruction: additional functional or design constraints.
+
+    Your responsibilities:
+
+    1) File Generation:
+       - Produce ONE single self-contained HTML file.
+       - Include full HTML structure: <!DOCTYPE html>, <html>, <head>, <body>.
+       - All CSS must be inside <style> tags.
+       - All JavaScript must be inside <script> tags.
+       - Do not create multiple files.
+       - Do not require build tools or npm packages.
+       - CDN libraries (e.g., Tailwind, Google Fonts, icons) are allowed.
+       - The file represents: output/{module_name}.html
+
+    2) UI & Design Requirements:
+       - The design must be modern, clean, and responsive.
+       - Must work on mobile, tablet, and desktop.
+       - Use proper spacing, typography, and visual hierarchy.
+       - Provide good UX:
+         • loading states
+         • empty states
+         • error messages
+         • smooth transitions where appropriate
+
+    3) Component Implementation:
+       - Every component listed in {components} must be fully implemented.
+       - No placeholders unless explicitly required.
+       - Forms must validate inputs.
+       - Buttons must trigger meaningful actions.
+       - Lists/tables must dynamically update.
+       - Modals must open and close correctly.
+       - Filters/search must actually filter data.
+
+    4) JavaScript Architecture:
+       - Organize code clearly inside the file:
+         • Application State
+         • UI Rendering Functions
+         • Event Handlers
+         • Mock API Layer (async functions returning JSON)
+         • Utility Functions
+       - Simulate backend calls using async functions.
+       - Keep mock endpoints structured so they can be replaced by real APIs.
+       - Maintain clean separation between UI logic and data logic.
+
+    5) Code Quality:
+       - Clean indentation and readable structure.
+       - Avoid duplicated logic.
+       - No unnecessary components beyond {components}.
+       - Keep logic modular and maintainable.
+
+    Output Constraints:
+       - Return only HTML code
+       - Do NOT add explanations.
+       - Do NOT use markdown fences.
+       - The first line must be: <!DOCTYPE html>
+       - The file represents: {module_name}
+
+  expected_output: >
+    A single fully functional self-contained HTML file named {module_name}.html
+    The file named save should not have any space in betwwen words. If there are, replace them with '_'. This is very very important
+    with HTML, CSS, and JavaScript implemented according to the given components
+    and instruction, ready for real-world use.
+  agent: webpage_creator
+  output_file: output/{module_name}.html
